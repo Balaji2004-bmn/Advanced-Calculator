@@ -1,0 +1,38 @@
+{
+  "name": "advanced-scientific-calculator",
+  "version": "1.0.0",
+  "description": "A feature-rich, modern scientific calculator built with HTML, CSS, and JavaScript",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8000",
+    "dev": "npx http-server -p 3000",
+    "serve": "npx http-server -p 8080"
+  },
+  "keywords": [
+    "calculator",
+    "scientific",
+    "math",
+    "javascript",
+    "html",
+    "css",
+    "web",
+    "responsive",
+    "modern"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/advanced-scientific-calculator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/advanced-scientific-calculator/issues"
+  },
+  "homepage": "https://github.com/yourusername/advanced-scientific-calculator#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

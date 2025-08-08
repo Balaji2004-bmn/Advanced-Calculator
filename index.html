@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+    <div class="calculator">
+        <div class="display-container">
+            <input type="text" id="display" readonly>
+            <div id="preview" class="preview"></div>
+        </div>
+        
+        <div class="controls">
+            <button id="preview-toggle" onclick="toggleRealTimePreview()" class="control-btn">Preview: ON</button>
+            <button id="angle-unit" onclick="toggleAngleUnit()" class="control-btn">RAD</button>
+        </div>
+        
+        <div class="buttons">
+            <!-- Memory Functions -->
+            <button class="memory-btn" onclick="memoryStore()">MS</button>
+            <button class="memory-btn" onclick="memoryRecall()">MR</button>
+            <button class="memory-btn" onclick="memoryAdd()">M+</button>
+            <button class="memory-btn" onclick="memorySubtract()">M-</button>
+            <button class="memory-btn" onclick="memoryClear()">MC</button>
+            
+            <!-- Advanced Functions -->
+            <button class="adv-btn" onclick="percentage()">%</button>
+            <button class="adv-btn" onclick="reciprocal()">1/x</button>
+            <button class="adv-btn" onclick="absolute()">|x|</button>
+            <button class="adv-btn" onclick="negate()">±</button>
+            
+            <!-- Statistical Functions -->
+            <button class="stat-btn" onclick="mean()">Mean</button>
+            <button class="stat-btn" onclick="standardDeviation()">Std Dev</button>
+            <button class="stat-btn" onclick="random()">Rand</button>
+            <button class="stat-btn" onclick="randomRange()">Rand(1-n)</button>
+            
+            <!-- Enhanced Percentage -->
+            <button class="adv-btn" onclick="percentageOf()">% of</button>
+            <button class="adv-btn" onclick="percentageChange()">% Δ</button>
+            
+            <!-- Hyperbolic Functions -->
+            <button class="sci-btn" onclick="sinh()">sinh</button>
+            <button class="sci-btn" onclick="cosh()">cosh</button>
+            <button class="sci-btn" onclick="tanh()">tanh</button>
+            
+            <!-- First Row -->
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="appendToDisplay('(')">(</button>
+            <button onclick="appendToDisplay(')')">)</button>
+            <button onclick="appendToDisplay('/')">/</button>
+            
+            <!-- Number Pad -->
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('*')">×</button>
+            
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('-')">-</button>
+            
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('+')">+</button>
+            
+            <!-- Bottom Row -->
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="backspace()">⌫</button>
+            <button onclick="calculate()" class="equals">=</button>
+            
+            <!-- Scientific Functions -->
+            <button class="sci-btn" onclick="sqrt()">√</button>
+            <button class="sci-btn" onclick="square()">x²</button>
+            <button class="sci-btn" onclick="cube()">x³</button>
+            <button class="sci-btn" onclick="power()">x^y</button>
+            
+            <button class="sci-btn" onclick="sin()">sin</button>
+            <button class="sci-btn" onclick="cos()">cos</button>
+            <button class="sci-btn" onclick="tan()">tan</button>
+            <button class="sci-btn" onclick="convertUnits()">Unit</button>
+            
+            <button class="sci-btn" onclick="asin()">asin</button>
+            <button class="sci-btn" onclick="acos()">acos</button>
+            <button class="sci-btn" onclick="atan()">atan</button>
+            
+            <button class="sci-btn" onclick="log()">log</button>
+            <button class="sci-btn" onclick="ln()">ln</button>
+            <button class="sci-btn" onclick="factorial()">x!</button>
+            
+            <button class="sci-btn" onclick="pi()">π</button>
+            <button class="sci-btn" onclick="e()">e</button>
+        </div>
+        
+        <div class="history-panel">
+            <div class="history-header">
+                <h3>History</h3>
+                <button class="export-btn" onclick="exportHistory()" title="Export History (Ctrl+H)">📤</button>
+            </div>
+            <ul id="history-list"></ul>
+            <button class="clear-history" onclick="clearHistory()">Clear History</button>
+        </div>
+        
+        <div class="keyboard-shortcuts">
+            <h4>Keyboard Shortcuts:</h4>
+            <div class="shortcuts-grid">
+                <span>Ctrl+P: π</span>
+                <span>Ctrl+E: e</span>
+                <span>Ctrl+R: 1/x</span>
+                <span>Ctrl+A: |x|</span>
+                <span>Ctrl+N: ±</span>
+                <span>Ctrl+U: Unit</span>
+                <span>Ctrl+D: RAD/DEG</span>
+                <span>Ctrl+T: Preview</span>
+                <span>Enter: Calculate</span>
+                <span>Escape: Clear</span>
+                <span>Backspace: Delete</span>
+                <span>%: Percentage</span>
+            </div>
+        </div>
+        
+        <div class="theme-switcher">
+            <button onclick="setTheme('light')">☀️ Light</button>
+            <button onclick="setTheme('dark')">🌙 Dark</button>
+            <button onclick="setTheme('solarized')">🔆 Solarized</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
