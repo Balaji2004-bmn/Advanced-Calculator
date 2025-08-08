@@ -2,6 +2,10 @@
 
 A feature-rich, modern scientific calculator built with HTML, CSS, and JavaScript. This calculator provides professional-grade mathematical functions with a beautiful, responsive interface.
 
+## 🌐 Live Demo
+
+**Try the calculator online:** [https://parallel-existence.surge.sh](https://parallel-existence.surge.sh)
+
 ## ✨ Features
 
 ### 🎯 Core Calculator Functions
